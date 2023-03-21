@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run clean && parcel public\\index.html --dist-dir development -p 3000",
+    "build": "rimraf .\\dist && parcel build public\\*.html --dist-dir dist --public-url .\\",
+    "clean": "rimraf .\\development && rimraf .\\.parcel-cache",
     "format": "prettier --write --plugin-search-dir=. **/*.{js,md,json,css,scss} --ignore-path .gitignore"
   },
   "keywords": [],
@@ -16,6 +18,7 @@
     "@babel/runtime-corejs3": "^7.21.0",
     "parcel": "^2.8.3",
     "prettier": "2.8.6",
+    "rimraf": "^4.4.0",
     "sass": "^1.59.3"
   }
 }

@@ -1,3 +1,6 @@
 # Ignore artifacts:
 build
 coverage
+development
+.parcel-cache
+dist
